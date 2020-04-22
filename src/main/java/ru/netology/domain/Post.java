@@ -6,27 +6,33 @@ public class Post {
 
     private int id;
     private String OwnerId;
+    private int fromId;
+    private int created_by;
     private LocalDate date;
     private String text;
     private String pictureUrl;
     private int like;
-    private CommentsInfo comments;
+    private CommentsInfo commentsInfo;
     private String share;
     private int view;
     private int counter = 0;
+    private Geo geo;
 
-    public Post(int id, String ownerId, LocalDate date, String text, String pictureUrl, int like, CommentsInfo comments, String share, int view, int counter) {
+    public Post(int id, String ownerId, int fromId, int created_by, LocalDate date, String text, String pictureUrl,
+                int like, CommentsInfo commentsInfo, String share, int view, int counter, Geo geo) {
         this.id = id;
         OwnerId = ownerId;
+        this.fromId = fromId;
+        this.created_by = created_by;
         this.date = date;
         this.text = text;
         this.pictureUrl = pictureUrl;
         this.like = like;
-        this.comments = comments;
+        this.commentsInfo = commentsInfo;
         this.share = share;
         this.view = view;
         this.counter = counter;
-        counter++;
+        this.geo = geo;
     }
 
     public int getId() {
@@ -77,14 +83,6 @@ public class Post {
         this.like = like;
     }
 
-    public CommentsInfo getComments() {
-        return comments;
-    }
-
-    public void setComments(CommentsInfo comments) {
-        this.comments = comments;
-    }
-
     public String getShare() {
         return share;
     }
@@ -99,6 +97,46 @@ public class Post {
 
     public void setView(int view) {
         this.view = view;
+    }
+
+    public int getFromId() {
+        return fromId;
+    }
+
+    public void setFromId(int fromId) {
+        this.fromId = fromId;
+    }
+
+    public int getCreated_by() {
+        return created_by;
+    }
+
+    public void setCreated_by(int created_by) {
+        this.created_by = created_by;
+    }
+
+    public CommentsInfo getCommentsInfo() {
+        return commentsInfo;
+    }
+
+    public void setCommentsInfo(CommentsInfo commentsInfo) {
+        this.commentsInfo = commentsInfo;
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
+
+    public Geo getGeo() {
+        return geo;
+    }
+
+    public void setGeo(Geo geo) {
+        this.geo = geo;
     }
 }
 

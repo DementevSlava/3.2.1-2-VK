@@ -2,10 +2,11 @@ package ru.netology.domain;
 
 public class Like {
     private int counter = 0;
+    private boolean userLikes;
 
-    public Like(int counter) {
-        counter++;
+    public Like(int counter, boolean userLikes) {
         this.counter = counter;
+        this.userLikes = userLikes;
     }
 
     public int getCounter() {
@@ -14,5 +15,13 @@ public class Like {
 
     public void setCounter(int counter) {
         this.counter = counter;
+    }
+
+    public boolean isUserLikes() {
+        return userLikes;
+    }
+
+    public void setUserLikes(boolean userLikes) {
+        this.userLikes = userLikes;
     }
 }
