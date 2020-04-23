@@ -4,12 +4,12 @@ import java.time.LocalDate;
 
 public class Document {
 
-    int id;
-    int ownerId;
-    String title;
-    int size;
-    String ext;
-    String url;
-    LocalDate date;
-    int type;
+    private int id;
+    private int ownerId;
+    private String title;
+    private int size;
+    private String ext;
+    private String url;
+    private LocalDate date;
+    private int type;
 }

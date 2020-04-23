@@ -4,13 +4,12 @@ import java.time.LocalDate;
 
 public class Audio {
 
-    int id;
-    int ownerId;
-    String artist;
-    String title;
-    String description;
-    int duration;
-    LocalDate date;
-    int views;
-    String comments;
+    private int id;
+    private int ownerId;
+    private String artist;
+    private String title;
+    private String description;
+    private int duration;
+    private int views;
+    private String comments;
 }

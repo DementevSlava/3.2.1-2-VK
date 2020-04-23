@@ -4,15 +4,15 @@ import java.time.LocalDate;
 
 public class Video {
 
-    int id;
-    int ownerId;
-    String title;
-    String description;
-    int duration;
-    String photo130;
-    String firstFrame130;
-    LocalDate date;
-    int views;
-    String comments;
+    private int id;
+    private int ownerId;
+    private String title;
+    private String description;
+    private int duration;
+    private String photo130;
+    private String firstFrame130;
+    private LocalDate date;
+    private int views;
+    private String comments;
 
 }
