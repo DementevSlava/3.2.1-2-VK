@@ -5,25 +5,31 @@ import java.time.LocalDate;
 public class Post {
 
     private int id;
-    private String OwnerId;
+    private String ownerId;
     private int fromId;
-    private int created_by;
+    private int createdBy;
     private LocalDate date;
     private String text;
     private String pictureUrl;
-    private int like;
+    private Like like;
     private CommentsInfo commentsInfo;
-    private String share;
-    private int view;
+    private Share share;
+    private View view;
     private int counter = 0;
     private Geo geo;
+    private int canPin;
+    private int canDelete;
+    private int canEdit;
+    private int isPinned;
+    private int markedAsAds;
+    private boolean isFavorite;
+    private int postponedId;
 
-    public Post(int id, String ownerId, int fromId, int created_by, LocalDate date, String text, String pictureUrl,
-                int like, CommentsInfo commentsInfo, String share, int view, int counter, Geo geo) {
+    public Post(int id, String ownerId, int fromId, int createdBy, LocalDate date, String text, String pictureUrl, Like like, CommentsInfo commentsInfo, Share share, View view, int counter, Geo geo, int can_pin, int can_delete, int can_edit, int is_pinned, int marked_as_ads, boolean is_favorite, int postponed_id) {
         this.id = id;
-        OwnerId = ownerId;
+        this.ownerId = ownerId;
         this.fromId = fromId;
-        this.created_by = created_by;
+        this.createdBy = createdBy;
         this.date = date;
         this.text = text;
         this.pictureUrl = pictureUrl;
@@ -33,6 +39,13 @@ public class Post {
         this.view = view;
         this.counter = counter;
         this.geo = geo;
+        this.canPin = can_pin;
+        this.canDelete = can_delete;
+        this.canEdit = can_edit;
+        this.isPinned = is_pinned;
+        this.markedAsAds = marked_as_ads;
+        this.isFavorite = is_favorite;
+        this.postponedId = postponed_id;
     }
 
     public int getId() {
@@ -44,11 +57,11 @@ public class Post {
     }
 
     public String getOwnerId() {
-        return OwnerId;
+        return ownerId;
     }
 
     public void setOwnerId(String ownerId) {
-        OwnerId = ownerId;
+        this.ownerId = ownerId;
     }
 
     public LocalDate getDate() {
@@ -75,27 +88,27 @@ public class Post {
         this.pictureUrl = pictureUrl;
     }
 
-    public int getLike() {
+    public Like getLike() {
         return like;
     }
 
-    public void setLike(int like) {
+    public void setLike(Like like) {
         this.like = like;
     }
 
-    public String getShare() {
+    public Share getShare() {
         return share;
     }
 
-    public void setShare(String share) {
+    public void setShare(Share share) {
         this.share = share;
     }
 
-    public int getView() {
+    public View getView() {
         return view;
     }
 
-    public void setView(int view) {
+    public void setView(View view) {
         this.view = view;
     }
 
@@ -107,12 +120,12 @@ public class Post {
         this.fromId = fromId;
     }
 
-    public int getCreated_by() {
-        return created_by;
+    public int getCreatedBy() {
+        return createdBy;
     }
 
-    public void setCreated_by(int created_by) {
-        this.created_by = created_by;
+    public void setCreatedBy(int createdBy) {
+        this.createdBy = createdBy;
     }
 
     public CommentsInfo getCommentsInfo() {
@@ -137,6 +150,62 @@ public class Post {
 
     public void setGeo(Geo geo) {
         this.geo = geo;
+    }
+
+    public int getCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(int canPin) {
+        this.canPin = canPin;
+    }
+
+    public int getCanDelete() {
+        return canDelete;
+    }
+
+    public void setCanDelete(int canDelete) {
+        this.canDelete = canDelete;
+    }
+
+    public int getCanEdit() {
+        return canEdit;
+    }
+
+    public void setCanEdit(int canEdit) {
+        this.canEdit = canEdit;
+    }
+
+    public int getIsPinned() {
+        return isPinned;
+    }
+
+    public void setIsPinned(int isPinned) {
+        this.isPinned = isPinned;
+    }
+
+    public int getMarkedAsAds() {
+        return markedAsAds;
+    }
+
+    public void setMarkedAsAds(int markedAsAds) {
+        this.markedAsAds = markedAsAds;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
+
+    public int getPostponedId() {
+        return postponedId;
+    }
+
+    public void setPostponedId(int postponedId) {
+        this.postponedId = postponedId;
     }
 }
 
